@@ -1,0 +1,165 @@
+{
+    "categories": [
+        {
+            "supercategory": "vibration_damper",
+            "id":  2140001,
+            "name": "vibration_damper",
+            "ru_name": "Виброгаситель",
+            "is_violation": false,
+            "is_primary": true,
+            "exclude": false,
+            "threshold": 0.75,
+            "color": [
+                225,
+                96,
+                55
+            ],
+            "keypoints": [],
+            "skeleton": [],
+            "skeleton_color": [],
+            "full_ru_name": "Гаситель вибрации",
+            "annotation_type": "box"
+        },
+        {
+            "supercategory": "festoon_insulators",
+            "id":  2150001,
+            "name": "festoon_insulators",
+            "ru_name": "Гирлянда стекло",
+            "is_violation": false,
+            "is_primary": true,
+            "exclude": false,
+            "threshold": 0.75,
+            "color": [
+                102,
+                255,
+                102
+            ],
+            "keypoints": [],
+            "skeleton": [],
+            "skeleton_color": [],
+            "full_ru_name": "Гирлянда изоляторов",
+            "annotation_type": "box"
+        },        
+		{
+            "supercategory": "festoon_insulators",
+            "id":  2280011,
+            "name": "polymer_insulators",
+            "ru_name": "Гирлянда полимер",
+            "is_violation": false,
+            "is_primary": true,
+            "exclude": false,
+            "threshold": 0.75,
+            "color": [
+                204,
+                51,
+                102
+            ],
+            "keypoints": [],
+            "skeleton": [],
+            "skeleton_color": [],
+            "full_ru_name": "Гирлянда полимерных изоляторов",
+            "annotation_type": "box"
+        },
+        {
+            "supercategory": "traverse",
+            "id":  2160001,
+            "name": "traverse",
+            "ru_name": "Траверса",
+            "is_violation": false,
+            "is_primary": true,
+            "exclude": false,
+            "threshold": 0.75,
+            "color": [
+                158,
+                217,
+                7
+            ],
+            "keypoints": [],
+            "skeleton": [],
+            "skeleton_color": [],
+            "full_ru_name": "Траверса опоры",
+            "annotation_type": "box"
+        },
+        {
+            "supercategory": "nest",
+            "id": 2220001,
+            "name": "nest",
+            "ru_name": "Гнездо",
+            "is_violation": true,
+            "is_primary": true,
+            "exclude": false,
+            "threshold": 0.7,
+            "color": [
+                131,
+                224,
+                112
+            ],
+            "keypoints": [],
+            "skeleton": [],
+            "skeleton_color": [],
+            "full_ru_name": "Гнезда на траверсах",
+            "annotation_type": "box"
+        },
+        {
+            "supercategory": "festoon_insulators",
+            "id": 2280000,
+            "name": "bad_insulator",
+            "ru_name": "Изолятор-",
+            "is_violation": true,
+            "is_primary": true,
+            "exclude": false,
+            "threshold": 0.75,
+            "color": [
+                93,
+                87,
+                117
+            ],
+            "keypoints": [],
+            "skeleton": [],
+            "skeleton_color": [],
+            "full_ru_name": "Изолятор отсутствует",
+            "annotation_type": "box"
+	    },
+        {
+            "supercategory": "festoon_insulators",
+            "id": 2280001,
+            "name": "damaged_insulator",
+            "ru_name": "Изолятор+",
+            "is_violation": true,
+            "is_primary": true,
+            "exclude": false,
+            "threshold": 0.75,
+            "color": [
+                49,
+                147,
+                245
+            ],
+            "keypoints": [],
+            "skeleton": [],
+            "skeleton_color": [],
+            "full_ru_name": "Поврежденный, сколотый изолятор",
+            "annotation_type": "box"
+	    },
+        {
+            "supercategory": "safety_sign",
+            "id":  2270001,
+            "name": "safety_sign+",
+            "ru_name": "Табличка+",
+            "is_violation": false,
+            "is_primary": true,
+            "exclude": false,
+            "threshold": 0.75,
+            "color": [
+                204,
+                51,
+                102
+            ],
+            "keypoints": [],
+            "skeleton": [],
+            "skeleton_color": [],
+            "full_ru_name": "Знак безопасности, диспетчерская табличка, нумерация опор",
+            "annotation_type": "box"
+        }
+
+    ]
+}
