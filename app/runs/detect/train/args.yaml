@@ -1,6 +1,6 @@
 task: detect
 mode: train
-model: yolov8n.pt
+model: yolov8m.pt
 data: C:\Users\SAVVA\Desktop\hakaton_v2\dataset_yolo\powerline.yaml
 epochs: 50
 time: null
@@ -10,7 +10,7 @@ imgsz: 640
 save: true
 save_period: -1
 cache: false
-device: cpu
+device: '0'
 workers: 8
 project: null
 name: train

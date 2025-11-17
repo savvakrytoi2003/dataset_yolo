@@ -11,11 +11,11 @@ if __name__ == "__main__":
     print("Using data:", data_yaml)
 
     # загружаем предобученную маленькую модель
-    model = YOLO("yolov8n.pt")
+    model = YOLO("yolov8m.pt")
 
     model.train(
         data=str(data_yaml),
-        epochs=1,
+        epochs=50,
         imgsz=640,
         batch=8,
         device=0
