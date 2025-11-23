@@ -1,35 +1,26 @@
 import json
 from pathlib import Path
 
-coco_path = Path("instances_train.json")
-out_path = Path("instances_train_filtered.json")
+# пути к файлам
+IN_PATH = Path(r"C:\Users\SAVVA\Desktop\hakaton_v2\dataset\coco_categories.json")
+OUT_PATH = Path(r"C:\Users\SAVVA\Desktop\hakaton_v2\dataset\coco_categories_filtered.json")
 
+# какие категории удаляем
 REMOVE_CATS = {2220001, 2270001}  # nest, safety_sign+
 
-with coco_path.open() as f:
-    coco = json.load(f)
+with IN_PATH.open("r", encoding="utf-8") as f:
+    cfg = json.load(f)
 
-# 1. оставляем только нужные категории
-coco["categories"] = [
-    c for c in coco["categories"]
+print("Ключи в файле:", list(cfg.keys()))   # должно быть ['categories']
+print("Категорий до:", len(cfg["categories"]))
+
+cfg["categories"] = [
+    c for c in cfg["categories"]
     if c["id"] not in REMOVE_CATS
 ]
 
-# 2. фильтруем аннотации
-keep_anns = [
-    ann for ann in coco["annotations"]
-    if ann["category_id"] not in REMOVE_CATS
-]
+with OUT_PATH.open("w", encoding="utf-8") as f:
+    json.dump(cfg, f, ensure_ascii=False, indent=2)
 
-# 3. выкидываем картинки, у которых после фильтрации не осталось ни одной аннотации
-img_has_ann = {ann["image_id"] for ann in keep_anns}
-coco["images"] = [
-    img for img in coco["images"]
-    if img["id"] in img_has_ann
-]
-coco["annotations"] = keep_anns
-
-with out_path.open("w") as f:
-    json.dump(coco, f, ensure_ascii=False, indent=2)
-
-print("saved to", out_path)
+print("Категорий после:", len(cfg["categories"]))
+print("Сохранено в:", OUT_PATH)
